@@ -18,10 +18,14 @@ CEN 4072 - CRN 10421 - Software Testing
 ![Database Connection After Adding a Customer](https://cdn.discordapp.com/attachments/558430444581027850/809321611186143242/Screenshot_379.png)
 
 </br>
+
 **XAMPP Control Panel**
 ![XAMPP Control Panel](https://cdn.discordapp.com/attachments/558430444581027850/809323593091121162/Screenshot_380.png)
 
+
 </br>
+
+
 **Database Connection**
 ![Database Connection](https://cdn.discordapp.com/attachments/558430444581027850/809324225449295892/Screenshot_381.png)
 
