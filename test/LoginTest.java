@@ -40,7 +40,6 @@ class LoginTest {
     public void testLoginButtonNegative() {
         testUser = new User(null, null);
         assertEquals("UserName or Password Blank", myLogin.loginButton(testUser.getUsername(), testUser.getPassword()));
-
     }
 
     @Test
