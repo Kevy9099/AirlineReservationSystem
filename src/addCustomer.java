@@ -1,4 +1,3 @@
-
 import com.toedter.calendar.JCalendar;
 
 import java.awt.Image;
