@@ -1,3 +1,10 @@
+package integration;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
+import AirlineReservation.CustomerId;
+import AirlineReservation.ticket;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -6,11 +13,6 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-
-import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 /* Unit Test ~ Deliverable #3 */
 @RunWith(MockitoJUnitRunner.class)

@@ -1,3 +1,5 @@
+package AirlineReservation;
+
 import com.toedter.calendar.JCalendar;
 
 import java.sql.Connection;

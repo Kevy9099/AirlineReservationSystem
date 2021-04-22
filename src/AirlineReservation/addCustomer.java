@@ -1,3 +1,5 @@
+package AirlineReservation;
+
 import com.toedter.calendar.JCalendar;
 
 import java.awt.Image;
@@ -402,7 +404,7 @@ public class addCustomer extends javax.swing.JInternalFrame {
          String firstname = txtfirstname.getText();
          String lastname = txtlastname.getText();
          String nic = txtnic.getText(); 
-        String passport = txtpassport.getText();
+         String passport = txtpassport.getText();
          String address = txtaddress.getText();
         
         DateFormat da = new SimpleDateFormat("yyyy-MM-dd");

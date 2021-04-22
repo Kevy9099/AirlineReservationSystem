@@ -1,3 +1,5 @@
+package AirlineReservation;
+
 public class CustomerId {
     public CustomerId(String customerID) {
         this.customerID = customerID;

@@ -1,3 +1,10 @@
+package integration;
+
+import static org.mockito.Mockito.*;
+
+import AirlineReservation.Login;
+import AirlineReservation.User;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -6,9 +13,6 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 class LoginTest {
@@ -26,10 +30,18 @@ class LoginTest {
     }
 
     @Test
+    @DisplayName("CancelButton")
+    public void testCancelButton(){
+        Login.jButton2.doClick();
+    }
+
+
+    @Test
     @DisplayName("Positive testing with correct credentials and data type")
     public void testLoginButtonPositive() {
-        testUser = new User("K", "K");
+        testUser = new User("john", "123");
         Login.jButton1.doClick();
+        Login.jButton2.doClick();
         myLogin.loginButton(testUser.getUsername(), testUser.getPassword());
         Assertions.assertEquals("validated", myLogin.loginButton(testUser.getUsername(),
                 testUser.getPassword()));
@@ -39,7 +51,14 @@ class LoginTest {
     @DisplayName("Negative testing with null parameters")
     public void testLoginButtonNegative() {
         testUser = new User(null, null);
-        assertEquals("UserName or Password Blank", myLogin.loginButton(testUser.getUsername(), testUser.getPassword()));
+        Assertions.assertEquals("UserName or Password Blank", myLogin.loginButton(testUser.getUsername(), testUser.getPassword()));
+    }
+
+    @Test
+    @DisplayName("Negative testing with empty parameters")
+    public void testLoginButtonEmpty(){
+        testUser = new User("", "");
+        Assertions.assertEquals("UserName or Password Blank", myLogin.loginButton(testUser.getUsername(), testUser.getPassword()));
     }
 
     @Test
@@ -55,9 +74,9 @@ class LoginTest {
     public void mockTest(){
         //User to be tested
         myLogin = new Login();
-        userTest = new User("K","K");
+        userTest = new User("john","123");
         loginMock = mock(Login.class);
-        when(loginMock.loginButton("K","K")).thenReturn("validated");
+        when(loginMock.loginButton("john","123")).thenReturn("validated");
         Assertions.assertEquals("validated", myLogin.loginButton(userTest.getUsername(),
                 userTest.getPassword()));
 

@@ -1,3 +1,5 @@
+package AirlineReservation;
+
 public class userInfo {
     String id;
     String firstname;
