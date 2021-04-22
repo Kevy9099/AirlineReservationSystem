@@ -29,19 +29,12 @@ class LoginTest {
         myLogin = new Login();
     }
 
-    @Test
-    @DisplayName("CancelButton")
-    public void testCancelButton(){
-        Login.jButton2.doClick();
-    }
-
 
     @Test
     @DisplayName("Positive testing with correct credentials and data type")
     public void testLoginButtonPositive() {
         testUser = new User("john", "123");
         Login.jButton1.doClick();
-        Login.jButton2.doClick();
         myLogin.loginButton(testUser.getUsername(), testUser.getPassword());
         Assertions.assertEquals("validated", myLogin.loginButton(testUser.getUsername(),
                 testUser.getPassword()));
@@ -54,12 +47,6 @@ class LoginTest {
         Assertions.assertEquals("UserName or Password Blank", myLogin.loginButton(testUser.getUsername(), testUser.getPassword()));
     }
 
-    @Test
-    @DisplayName("Negative testing with empty parameters")
-    public void testLoginButtonEmpty(){
-        testUser = new User("", "");
-        Assertions.assertEquals("UserName or Password Blank", myLogin.loginButton(testUser.getUsername(), testUser.getPassword()));
-    }
 
     @Test
     @DisplayName("Input validation with correct data type but wrong values")
