@@ -57,7 +57,7 @@ The database that is implemented in this project is a MySQL database. The databa
 ![Database Connection](https://cdn.discordapp.com/attachments/558430444581027850/809324225449295892/Screenshot_381.png)
 
 **Entity Relationship Diagram**
-![Entity Relationship Diagram](https://media.discordapp.net/attachments/820029995828510730/834939769237536849/Screenshot_435.png?width=650&height=670)
+![Entity Relationship Diagram](https://cdn.discordapp.com/attachments/820029995828510730/834955975693434940/Screenshot_442.png)
 
 **UML Class Diagram**
 ![UML Class Diagram](https://cdn.discordapp.com/attachments/820029995828510730/834940699781627924/Screenshot_438.png)
