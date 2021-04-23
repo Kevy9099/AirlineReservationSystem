@@ -17,7 +17,6 @@ import org.mockito.runners.MockitoJUnitRunner;
 @RunWith(MockitoJUnitRunner.class)
 class LoginTest {
     Login myLogin;
-
     User testUser;
     @InjectMocks
     Login loginMock;

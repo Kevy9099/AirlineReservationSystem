@@ -157,6 +157,10 @@ public class Login extends javax.swing.JFrame {
     String username = txtuser.getText();
     String password = txtpass.getText();
     loginButton(username, password);
+
+    jButton1.setName("loginButton");
+    txtuser.setName("username");
+    txtpass.setName("password");
   }
 
 
