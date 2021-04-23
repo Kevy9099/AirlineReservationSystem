@@ -22,7 +22,7 @@ CEN 4072 Semester Project Thursday Group 8
 Joseph Cisar,
 Nicholas Gonzalez,
 Kevin Mak,
-Louis Sze,
+and Louis Sze
 
 **Customer Tab**
 ![Customer Tab](https://cdn.discordapp.com/attachments/558430444581027850/809321397943140352/Screenshot_376.png)
