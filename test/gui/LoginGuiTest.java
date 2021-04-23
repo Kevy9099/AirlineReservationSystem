@@ -60,4 +60,5 @@ public class LoginGuiTest extends AssertJSwingJUnitTestCase {
     screen.cleanUp();
   }
 
+
 }
