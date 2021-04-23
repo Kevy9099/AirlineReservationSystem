@@ -17,15 +17,11 @@ Project description: Airline Reservation System is an application that will allo
 Airline Reservation System was produced by all teams members of Thursday, Group 8 as part of a group assignment for a Software Testing course at Florida Gulf Coast University in Fort Myers, Florida.
 
 Group and Group Members:
-
 CEN 4072 Semester Project Thursday Group 8
 
 Joseph Cisar
-
 Nicholas Gonzalez
-
 Kevin Mak
-
 Louis Sze
 
 **Customer Tab**
