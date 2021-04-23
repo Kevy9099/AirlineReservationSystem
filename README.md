@@ -39,7 +39,9 @@ CEN 4072 - CRN 10421 - Software Testing
 ![Use Case Diagram](https://cdn.discordapp.com/attachments/820029995828510730/834940973976780830/Screenshot_439.png)
 
 **Class Visualization**
-![Class Visualization](https://cdn.discordapp.com/attachments/820029995828510730/834942358654943272/Screenshot_436.png +  https://cdn.discordapp.com/attachments/820029995828510730/834942335242338354/Screenshot_437.png)
+![Class Visualization](https://cdn.discordapp.com/attachments/820029995828510730/834942358654943272/Screenshot_436.png)
+**Continued Class Visualization**
+![Class Visualization](https://cdn.discordapp.com/attachments/820029995828510730/834942335242338354/Screenshot_437.png)
 
 **Database Visualization**
 ![Database Visualization](https://cdn.discordapp.com/attachments/820029995828510730/834942361125257266/Screenshot_433.png)
