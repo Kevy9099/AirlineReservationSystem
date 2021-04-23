@@ -1,4 +1,4 @@
-package AirlineReservation;
+package main.AirlineReservation;
 
 public class CustomerId {
     public CustomerId(String customerID) {

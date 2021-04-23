@@ -2,8 +2,8 @@ package integration;
 
 import static org.mockito.Mockito.*;
 
-import AirlineReservation.Login;
-import AirlineReservation.User;
+import main.AirlineReservation.Login;
+import main.AirlineReservation.User;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

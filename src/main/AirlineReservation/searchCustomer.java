@@ -1,4 +1,4 @@
-package AirlineReservation;
+package main.AirlineReservation;
 
 import com.toedter.calendar.JCalendar;
 

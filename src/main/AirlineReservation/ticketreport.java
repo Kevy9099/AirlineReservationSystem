@@ -1,4 +1,4 @@
-package AirlineReservation;
+package main.AirlineReservation;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

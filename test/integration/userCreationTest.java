@@ -3,8 +3,8 @@ package integration;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-import AirlineReservation.userCreation;
-import AirlineReservation.userInfo;
+import main.AirlineReservation.userCreation;
+import main.AirlineReservation.userInfo;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

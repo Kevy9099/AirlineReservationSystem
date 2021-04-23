@@ -1,4 +1,4 @@
-package AirlineReservation;
+package main.AirlineReservation;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -47,6 +47,7 @@ public class Login extends javax.swing.JFrame {
     jButton1.setName("loginButton");
     txtuser.setName("username");
     txtpass.setName("password");
+    jButton2.setName("cancelButton");
 
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -219,7 +220,8 @@ public class Login extends javax.swing.JFrame {
 
   public void jButton2ActionPerformed(java.awt.event.ActionEvent evt1) {
     System.out.println("Cancel Button");
-    System.exit(0);
+    hide();
+//    System.exit(0); this closes the application
   }
 
   /**

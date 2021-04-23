@@ -1,6 +1,6 @@
 package gui;
 
-import AirlineReservation.Main;
+import main.AirlineReservation.Main;
 import org.assertj.swing.fixture.FrameFixture;
 import org.assertj.swing.junit.testcase.AssertJSwingJUnitTestCase;
 import org.junit.jupiter.api.BeforeEach;

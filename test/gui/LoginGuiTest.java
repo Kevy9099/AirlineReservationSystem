@@ -2,7 +2,7 @@ package gui;
 
 import java.awt.Container;
 import javax.swing.JDesktopPane;
-import AirlineReservation.Login;
+import main.AirlineReservation.Login;
 import org.assertj.swing.edt.GuiActionRunner;
 import org.assertj.swing.fixture.Containers;
 import org.assertj.swing.fixture.FrameFixture;
@@ -13,11 +13,11 @@ import org.junit.jupiter.api.Test;
 
 
 public class LoginGuiTest extends AssertJSwingJUnitTestCase {
+
   private FrameFixture window;
   JDesktopPane pane;
 
   @BeforeEach
-  @Override
   protected void onSetUp() {
     Login test = GuiActionRunner.execute(Login::new);
     Container container = test.getContentPane();
@@ -30,6 +30,14 @@ public class LoginGuiTest extends AssertJSwingJUnitTestCase {
   }
 
   @Test
+  public void checkEmptyLogin() {
+    window.textBox("username").setText("");
+    window.textBox("password").setText("");
+    window.button("loginButton").click();
+    window.cleanUp();
+  }
+
+  @Test
   void checkValidLogin() {
     window.textBox("username").setText("john");
     window.textBox("password").setText("123");
@@ -39,20 +47,17 @@ public class LoginGuiTest extends AssertJSwingJUnitTestCase {
   }
 
   @Test
-  public void checkInvalidLogin(){
-    window.textBox("username").setText("");
-    window.textBox("password").setText("");
+  public void invalidLoginTest() {
+    window.textBox("username").enterText("George");
+    window.textBox("password").enterText("1gb42");
     window.button("loginButton").click();
     window.cleanUp();
   }
 
   @Test
-  public void validCancelButtonClickedTest(){
-    window.textBox("username").enterText("");
-    window.textBox("password").enterText("");
-    window.button("loginButton").click();
+  public void cancelButtonTest(){
+    window.button("cancelButton").click();
     window.cleanUp();
   }
-
 
 }
