@@ -6,13 +6,13 @@ Project description: Airline Reservation System is an application that will allo
 ## Software Requirements
 * The system shall allow users to log in by providing a UserID and password at the login screen
 * The program shall have mocks and stubs to test the functionality of the application
-* The system s* hall allow the user to add unique customer record into the database
-* The system s* hall allow users to search for customer info based on CustomerID
-* The system s* hall allow the user to add unique flights into the system
-* The system s* hall allow users to book a flight available from the database
-* The system s* hall allow the user to pick a destination from the selection
-* The system s* hall allow the user to select gender 
-* The  system * shall allow the user to add and look up prices 
+* The system shall allow the user to add unique customer record into the database
+* The system shall allow users to search for customer info based on CustomerID
+* The system shall allow the user to add unique flights into the system
+* The system shall allow users to book a flight available from the database
+* The system shall allow the user to pick a destination from the selection
+* The system shall allow the user to select gender 
+* The system shall allow the user to add and look up prices 
 
 
 **Customer Tab**
