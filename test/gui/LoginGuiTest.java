@@ -33,18 +33,26 @@ public class LoginGuiTest extends AssertJSwingJUnitTestCase {
   void checkValidLogin() {
     window.textBox("username").setText("john");
     window.textBox("password").setText("123");
-    window.button("loginbutton").click();
+    window.button("loginButton").click();
     window.cleanUp();
 
   }
-//
-//  @Test
-//  void checkTextLogin() {
-//    window.label("label2").requireText("UserName");
-//    window.label("label1").requireText("Password");
-//    window.button("login").requireText("Login");
-//    window.cleanUp();
-//  }
+
+  @Test
+  public void checkInvalidLogin(){
+    window.textBox("username").setText("");
+    window.textBox("password").setText("");
+    window.button("loginButton").click();
+    window.cleanUp();
+  }
+
+  @Test
+  public void validCancelButtonClickedTest(){
+    window.textBox("username").enterText("");
+    window.textBox("password").enterText("");
+    window.button("loginButton").click();
+    window.cleanUp();
+  }
 
 
 }

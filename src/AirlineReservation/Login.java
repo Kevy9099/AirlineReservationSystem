@@ -44,6 +44,10 @@ public class Login extends javax.swing.JFrame {
     txtuser = new javax.swing.JTextField();
     txtpass = new javax.swing.JPasswordField();
 
+    jButton1.setName("loginButton");
+    txtuser.setName("username");
+    txtpass.setName("password");
+
     setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
     jPanel1.setBorder(javax.swing.BorderFactory
@@ -62,11 +66,11 @@ public class Login extends javax.swing.JFrame {
 
       }
     });
-      jButton2.addActionListener(new java.awt.event.ActionListener(){
-          public void actionPerformed(java.awt.event.ActionEvent evt1){
-              jButton2ActionPerformed(evt1);
-          }
-      });
+    jButton2.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt1) {
+        jButton2ActionPerformed(evt1);
+      }
+    });
 
     jButton2.setText("Cancel");
 
@@ -158,9 +162,7 @@ public class Login extends javax.swing.JFrame {
     String password = txtpass.getText();
     loginButton(username, password);
 
-    jButton1.setName("loginButton");
-    txtuser.setName("username");
-    txtpass.setName("password");
+
   }
 
 
@@ -215,10 +217,10 @@ public class Login extends javax.swing.JFrame {
   }//GEN-LAST:event_jButton1ActionPerformed
 
 
-    public void jButton2ActionPerformed( java.awt.event.ActionEvent evt1){
-        System.out.println("Cancel Button");
-        System.exit(0);
-    }
+  public void jButton2ActionPerformed(java.awt.event.ActionEvent evt1) {
+    System.out.println("Cancel Button");
+    System.exit(0);
+  }
 
   /**
    * @param args the command line arguments
