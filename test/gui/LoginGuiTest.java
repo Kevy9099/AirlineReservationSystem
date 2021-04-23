@@ -14,50 +14,50 @@ import org.junit.jupiter.api.Test;
 
 public class LoginGuiTest extends AssertJSwingJUnitTestCase {
 
-  private FrameFixture window;
-  JDesktopPane pane;
+  private FrameFixture screen;
+  JDesktopPane deskPane;
 
   @BeforeEach
   protected void onSetUp() {
-    Login test = GuiActionRunner.execute(Login::new);
-    Container container = test.getContentPane();
-    pane = new JDesktopPane();
-    pane.add(container);
-    test.setVisible(true);
+    Login login = GuiActionRunner.execute(Login::new);
+    Container container = login.getContentPane();
+    deskPane = new JDesktopPane();
+    deskPane.add(container);
+    login.setVisible(true);
 
-    window = new FrameFixture(Containers.frameFor(container));
-    window.show();
+    screen = new FrameFixture(Containers.frameFor(container));
+    screen.show();
   }
 
   @Test
-  public void checkEmptyLogin() {
-    window.textBox("username").setText("");
-    window.textBox("password").setText("");
-    window.button("loginButton").click();
-    window.cleanUp();
+  public void loginIsEmpty() {
+    screen.textBox("username").setText("");
+    screen.textBox("password").setText("");
+    screen.button("loginButton").click();
+    screen.cleanUp();
   }
 
   @Test
-  void checkValidLogin() {
-    window.textBox("username").setText("john");
-    window.textBox("password").setText("123");
-    window.button("loginButton").click();
-    window.cleanUp();
+  void loginValidation() {
+    screen.textBox("username").setText("john");
+    screen.textBox("password").setText("123");
+    screen.button("loginButton").click();
+    screen.cleanUp();
 
   }
 
   @Test
-  public void invalidLoginTest() {
-    window.textBox("username").enterText("George");
-    window.textBox("password").enterText("1gb42");
-    window.button("loginButton").click();
-    window.cleanUp();
+  public void invalidTest() {
+    screen.textBox("username").enterText("Sze");
+    screen.textBox("password").enterText("4t367");
+    screen.button("loginButton").click();
+    screen.cleanUp();
   }
 
   @Test
-  public void cancelButtonTest(){
-    window.button("cancelButton").click();
-    window.cleanUp();
+  public void cancelBtnTest(){
+    screen.button("cancelButton").click();
+    screen.cleanUp();
   }
 
 }

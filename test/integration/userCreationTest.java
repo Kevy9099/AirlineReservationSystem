@@ -14,49 +14,56 @@ import org.mockito.Mock;
 
 
 public class userCreationTest {
-    userCreation myCreation;
-    userInfo myUserInfo;
 
-    @InjectMocks
-    userCreation userMock;
-    @Mock
-    userInfo testUserMock;
+  userCreation creation;
+  userInfo userInfo;
 
-    @BeforeEach
-    public void setup() {
-        myCreation = new userCreation();
-        userCreation.txtuserid.setText("CS005");
-        userCreation.txtfirstname.setText("Abc");
-        userCreation.txtlastname.setText("EXY");
-        userCreation.txtusername.setText("gimim");
-        userCreation.txtpassword.setText("42424");
-    }
+  @InjectMocks
+  userCreation userMock;
+  @Mock
+  userInfo infoMock;
 
-    @Test
-    @DisplayName("Positive Testing With Correct User Infomation")
-    public void testCreationBtnPositive() {
-        myUserInfo = new userInfo("CS005", "Abc", "EXY", "gimim", "42424");
-        userCreation.jButton1.doClick();
-        myCreation.userCreationButton(myUserInfo.getId(), myUserInfo.getFirstname(), myUserInfo.getLastname(), myUserInfo.getUsername(), myUserInfo.getPassword());
-        Assertions.assertEquals("User Created...", myCreation.userCreationButton(myUserInfo.getId(), myUserInfo.getFirstname(), myUserInfo.getLastname(), myUserInfo.getUsername(), myUserInfo.getPassword()));
-    }
+  @BeforeEach
+  public void setup() {
+    creation = new userCreation();
+    userCreation.txtuserid.setText("CS005");
+    userCreation.txtfirstname.setText("Abc");
+    userCreation.txtlastname.setText("EXY");
+    userCreation.txtusername.setText("gimim");
+    userCreation.txtpassword.setText("42424");
+  }
 
-    @Test
-    @DisplayName("Negative Testing With Null Parameters")
-    public void testCreationBtnNegative() {
-        myUserInfo = new userInfo(null, null, null, null, null);
-        Assertions.assertEquals("Incorrect Fields", myCreation
-                .userCreationButton(myUserInfo.getId(), myUserInfo.getFirstname(), myUserInfo.getLastname(), myUserInfo.getUsername(), myUserInfo.getPassword()));
-    }
+  @Test
+  @DisplayName("Positive Testing")
+  public void positiveTest() {
+    userInfo = new userInfo("CS005", "Abc", "EXY", "gimim", "42424");
+    userCreation.jButton1.doClick();
+    creation.userCreationButton(userInfo.getId(), userInfo.getFirstname(), userInfo.getLastname(),
+        userInfo.getUsername(), userInfo.getPassword());
+    Assertions.assertEquals("User Created...", creation
+        .userCreationButton(userInfo.getId(), userInfo.getFirstname(), userInfo.getLastname(),
+            userInfo.getUsername(), userInfo.getPassword()));
+  }
 
-    @Test
-    @DisplayName("Mock")
-    public void mockTest() {
-        myCreation = new userCreation();
-        testUserMock = new userInfo("CS005", "Abc", "EXY", "gimim", "42424");
-        userMock = mock(userCreation.class);
-        when(userMock.userCreationButton("CS005", "Abc", "EXY", "gimim", "42424")).thenReturn("User Created");
-        Assertions.assertEquals("User Created...", myCreation
-                .userCreationButton(testUserMock.getId(), testUserMock.getFirstname(), testUserMock.getLastname(), testUserMock.getUsername(), testUserMock.getPassword()));
-    }
+  @Test
+  @DisplayName("Negative Testing")
+  public void negativeTest() {
+    userInfo = new userInfo(null, null, null, null, null);
+    Assertions.assertEquals("Incorrect Fields", creation
+        .userCreationButton(userInfo.getId(), userInfo.getFirstname(), userInfo.getLastname(),
+            userInfo.getUsername(), userInfo.getPassword()));
+  }
+
+  @Test
+  @DisplayName("Mock")
+  public void mockTest() {
+    creation = new userCreation();
+    infoMock = new userInfo("CS005", "Abc", "EXY", "gimim", "42424");
+    userMock = mock(userCreation.class);
+    when(userMock.userCreationButton("CS005", "Abc", "EXY", "gimim", "42424"))
+        .thenReturn("User Created");
+    Assertions.assertEquals("User Created...", creation
+        .userCreationButton(infoMock.getId(), infoMock.getFirstname(), infoMock.getLastname(),
+            infoMock.getUsername(), infoMock.getPassword()));
+  }
 }

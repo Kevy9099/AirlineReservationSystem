@@ -16,55 +16,57 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 @RunWith(MockitoJUnitRunner.class)
 class LoginTest {
-    Login myLogin;
-    User testUser;
-    @InjectMocks
-    Login loginMock;
-    @Mock
-    User userTest;
 
-    @BeforeEach
-    public void setup() {
-        myLogin = new Login();
-    }
+  Login login;
+  User user;
+  @InjectMocks
+  Login loginMock;
+  @Mock
+  User userMock;
 
-
-    @Test
-    @DisplayName("Positive testing with correct credentials and data type")
-    public void testLoginButtonPositive() {
-        testUser = new User("john", "123");
-        Login.jButton1.doClick();
-        myLogin.loginButton(testUser.getUsername(), testUser.getPassword());
-        Assertions.assertEquals("validated", myLogin.loginButton(testUser.getUsername(),
-                testUser.getPassword()));
-    }
-
-    @Test
-    @DisplayName("Negative testing with null parameters")
-    public void testLoginButtonNegative() {
-        testUser = new User(null, null);
-        Assertions.assertEquals("UserName or Password Blank", myLogin.loginButton(testUser.getUsername(), testUser.getPassword()));
-    }
+  @BeforeEach
+  public void setup() {
+    login = new Login();
+  }
 
 
-    @Test
-    @DisplayName("Input validation with correct data type but wrong values")
-    public void testLoginButtonInputVal() {
-        testUser = new User("soFake", "notReal");
-        Assertions.assertEquals("UserName or Password do not Match", myLogin.loginButton(testUser.getUsername(),
-                testUser.getPassword()));
-    }
+  @Test
+  @DisplayName("Positive testing with correct credentials and data type")
+  public void positiveTest() {
+    user = new User("john", "123");
+    Login.jButton1.doClick();
+    login.loginButton(user.getUsername(), user.getPassword());
+    Assertions.assertEquals("validated", login.loginButton(user.getUsername(),
+        user.getPassword()));
+  }
 
-    @Test
-    @DisplayName("Mock")
-    public void mockTest(){
-        //User to be tested
-        myLogin = new Login();
-        userTest = new User("john","123");
-        loginMock = mock(Login.class);
-        when(loginMock.loginButton("john","123")).thenReturn("validated");
-        Assertions.assertEquals("validated", myLogin.loginButton(userTest.getUsername(),
-                userTest.getPassword()));
+  @Test
+  @DisplayName("Negative testing with null parameters")
+  public void negativeTest() {
+    user = new User(null, null);
+    Assertions.assertEquals("UserName or Password Blank",
+        login.loginButton(user.getUsername(), user.getPassword()));
+  }
 
-    }
+
+  @Test
+  @DisplayName("Input validation with correct data type but wrong values")
+  public void inputTest() {
+    user = new User("fake", "soFake");
+    Assertions
+        .assertEquals("UserName or Password do not Match", login.loginButton(user.getUsername(),
+            user.getPassword()));
+  }
+
+  @Test
+  @DisplayName("Mock")
+  public void mockTest() {
+    login = new Login();
+    userMock = new User("john", "123");
+    loginMock = mock(Login.class);
+    when(loginMock.loginButton("john", "123")).thenReturn("validated");
+    Assertions.assertEquals("validated", login.loginButton(userMock.getUsername(),
+        userMock.getPassword()));
+
+  }
 }

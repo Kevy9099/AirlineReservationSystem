@@ -6,78 +6,84 @@ import org.assertj.swing.junit.testcase.AssertJSwingJUnitTestCase;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import javax.swing.*;
-
 
 public class MainGuiTest extends AssertJSwingJUnitTestCase {
-  private FrameFixture window;
-  JDesktopPane pane;
+
+  private FrameFixture screen;
 
   @BeforeEach
   @Override
   protected void onSetUp() {
     Main main = new Main();
-    window = new FrameFixture(main);
-    window.show();
+    screen = new FrameFixture(main);
+    screen.show();
   }
 
   @Test
   public void customerMenu() {
-    window.menuItem("customerMenu").click().requireVisible();
-    window.cleanUp();
+    screen.menuItem("customerMenu").click().requireVisible();
+    screen.cleanUp();
   }
 
   @Test
   public void addCustomer() {
-    window.menuItem("customerMenu").click().requireVisible();
-    window.menuItem("addCustomer").click().requireVisible();
-    window.cleanUp();
+    screen.menuItem("customerMenu").click().requireVisible();
+    screen.menuItem("addCustomer").click().requireVisible();
+    screen.cleanUp();
   }
 
   @Test
   public void searchCustomer() {
-    window.menuItem("customerMenu").click().requireVisible();
-    window.menuItem("searchCustomer").click().requireVisible();
-    window.cleanUp();
+    screen.menuItem("customerMenu").click().requireVisible();
+    screen.menuItem("searchCustomer").click().requireVisible();
+    screen.cleanUp();
   }
 
   @Test
-  public void ticketsMenu() {
-    window.menuItem("ticketsMenu").click().requireVisible();
-    window.cleanUp();
+  public void TicketsMenu() {
+    screen.menuItem("ticketsMenu").click().requireVisible();
+    screen.cleanUp();
   }
 
   @Test
   public void bookTicket() {
-    window.menuItem("ticketsMenu").click().requireVisible();
-    window.menuItem("bookTicket").click().requireVisible();
-    window.cleanUp();
+    screen.menuItem("ticketsMenu").click().requireVisible();
+    screen.menuItem("bookTicket").click().requireVisible();
+    screen.cleanUp();
   }
 
   @Test
   public void ticketReport() {
-    window.menuItem("ticketsMenu").click().requireVisible();
-    window.menuItem("ticketReport").click().requireVisible();
-    window.cleanUp();
+    screen.menuItem("ticketsMenu").click().requireVisible();
+    screen.menuItem("ticketReport").click().requireVisible();
+    screen.cleanUp();
   }
 
   @Test
   public void flightMenu() {
-    window.menuItem("flightMenu").click().requireVisible();
-    window.cleanUp();
+    screen.menuItem("flightMenu").click().requireVisible();
+    screen.cleanUp();
   }
 
   @Test
   public void addFlight() {
-    window.menuItem("flightMenu").click().requireVisible();
-    window.menuItem("addFlight").click().requireVisible();
-    window.cleanUp();
+    screen.menuItem("flightMenu").click().requireVisible();
+    screen.menuItem("addFlight").click().requireVisible();
+    screen.cleanUp();
   }
+
 
   @Test
   public void userMenu() {
-    window.menuItem("userMenu").click().requireVisible();
-    window.cleanUp();
+    screen.menuItem("userMenu").click().requireVisible();
+    screen.cleanUp();
+  }
+
+  @Test
+  public void userCreation() {
+    screen.menuItem("userMenu").click().requireVisible();
+    screen.menuItem("userCreation").click().requireVisible();
+    screen.cleanUp();
   }
 
 
