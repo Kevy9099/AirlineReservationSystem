@@ -1,6 +1,19 @@
 # AirlineReservationSystem
 CEN 4072 - CRN 10421 - Software Testing
 
+Project description: Airline Reservation System is an application that will allow users and emplyees to book flights, create accounts, and conduct many other features that would be found in an airline reservation system.
+
+## Software Requirements
+* The system shall allow users to log in by providing a UserID and password at the login screen
+* The program shall have mocks and stubs to test the functionality of the application
+* The system s* hall allow the user to add unique customer record into the database
+* The system s* hall allow users to search for customer info based on CustomerID
+* The system s* hall allow the user to add unique flights into the system
+* The system s* hall allow users to book a flight available from the database
+* The system s* hall allow the user to pick a destination from the selection
+* The system s* hall allow the user to select gender 
+* The  system * shall allow the user to add and look up prices 
+
 
 **Customer Tab**
 ![Customer Tab](https://cdn.discordapp.com/attachments/558430444581027850/809321397943140352/Screenshot_376.png)
