@@ -24,6 +24,11 @@ Nicholas Gonzalez,
 Kevin Mak,
 and Louis Sze
 
+## Built With
+The integrated development environment (IDE) used for this project was IntelliJ IDEA Ultimate Edition. The Java Development Kit (JDK) is Java 15.
+
+The database that is implemented in this project is a MySQL database. The database contains four tables: ticket, user, customer, and flight.
+
 **Customer Tab**
 ![Customer Tab](https://cdn.discordapp.com/attachments/558430444581027850/809321397943140352/Screenshot_376.png)
 
