@@ -32,3 +32,16 @@ CEN 4072 - CRN 10421 - Software Testing
 **Entity Relationship Diagram**
 ![Entity Relationship Diagram](https://media.discordapp.net/attachments/820029995828510730/834939769237536849/Screenshot_435.png?width=650&height=670)
 
+**UML Class Diagram**
+![UML Class Diagram](https://cdn.discordapp.com/attachments/820029995828510730/834940699781627924/Screenshot_438.png)
+
+**Use Case Diagram**
+![Use Case Diagram](https://cdn.discordapp.com/attachments/820029995828510730/834940973976780830/Screenshot_439.png)
+
+**Class Visualization**
+![Class Visualization](https://cdn.discordapp.com/attachments/820029995828510730/834942358654943272/Screenshot_436.png, https://cdn.discordapp.com/attachments/820029995828510730/834942335242338354/Screenshot_437.png)
+
+**Database Visualization**
+![Database Visualization](https://cdn.discordapp.com/attachments/820029995828510730/834942361125257266/Screenshot_433.png)
+
+
